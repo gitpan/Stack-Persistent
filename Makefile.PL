@@ -8,5 +8,5 @@ WriteMakefile(
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Stack/Persistent.pm', # retrieve abstract from module
-       AUTHOR         => 'Kevin L. Esteb <kevin (at) kesteb.us>') : ()),
+       AUTHOR         => 'Kevin L. Esteb <kesteb@wsipc.org>') : ()),
 );

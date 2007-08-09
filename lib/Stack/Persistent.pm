@@ -8,7 +8,7 @@ use File::Spec;
 use Cache::FastMmap;
 
 our @ISA = qw();
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 # ------------------------------------------------------------------------
 # Public Methods
@@ -25,7 +25,7 @@ sub new {
     $self->{initialize} = 0;
     $self->{num_pages} = 64;
     $self->{page_size} = "64k";
-    $self->{expiration} = "24h";
+    $self->{expiration} = 0;
     $self->{cachefile} = File::Spec->catfile('tmp', 'stack-persistent.cache');
 
     bless($self, $class);
@@ -67,7 +67,8 @@ sub new {
                                            num_pages => $self->{num_pages},
                                            page_size => $self->{page_size},
                                            expire_time => $self->{expiration},
-                                           share_file => $self->{cachefile});
+                                           share_file => $self->{cachefile},
+                                           unlink_on_exit => 0);
 
     $self->{handle}->purge();
 
@@ -195,7 +196,7 @@ __END__
 
 =head1 NAME
 
-Stack::Persistent - A persistent stack
+Stack::persistent - A persistent stack
 
 =head1 SYNOPSIS
 
@@ -248,7 +249,7 @@ The size of those pages in bytes. The default is 64KB.
 
 =item -expiration
 
-The expiration of item with the stacks cache. The default is 24 hours.
+The expiration of item with the stacks cache.
 
 =item -filename
 

@@ -1,8 +1,8 @@
-Stack-Persistent version 0.02
+Stack-Persistent version 0.03
 =============================
 
-Stack::Persistent provides a presistent, named stack for your programs. 
-The stack is LIFO based.
+Stack::Persistent provides a persistent, named stack for your programs. 
+This stack is LIFO based.
 
 INSTALLATION
 
