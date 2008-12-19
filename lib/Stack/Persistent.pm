@@ -8,7 +8,7 @@ use File::Spec;
 use Cache::FastMmap;
 
 our @ISA = qw();
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 # ------------------------------------------------------------------------
 # Public Methods
@@ -196,7 +196,7 @@ __END__
 
 =head1 NAME
 
-Stack::persistent - A persistent stack
+Stack::Persistent - A persistent stack
 
 =head1 SYNOPSIS
 

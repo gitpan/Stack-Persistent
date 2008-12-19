@@ -13,4 +13,8 @@ Revision history for Perl extension Stack::Presistent.
      process exited. Kinds defeats the purpose. Changed the default
      epxiration to indefinate.
      
+0.04 19-Dec-2008 K.Esteb
+     Fixed a problem with required modules. Makefile.PL now lists
+     Cache::FastMmap as a required module.
+
 	       
